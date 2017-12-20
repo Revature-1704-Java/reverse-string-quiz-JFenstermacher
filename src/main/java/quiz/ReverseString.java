@@ -2,6 +2,11 @@ package quiz;
 
 public class ReverseString {
     public String reverse(String input) {
-        return new StringBuffer(input).reverse().toString();
+        StringBuilder sb = new StringBuilder();
+        
+        for (int i = input.length() - 1; i >= 0; i--)
+        	sb.append(input.charAt(i));
+        
+    	return sb.toString();
     }
 }
